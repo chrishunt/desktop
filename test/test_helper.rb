@@ -4,7 +4,7 @@ require 'pry'
 require 'vcr'
 
 # add lib to load path
-$: << 'lib'
+$LOAD_PATH.unshift 'lib'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'test/fixtures'
