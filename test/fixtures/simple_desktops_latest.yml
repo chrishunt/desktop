@@ -1,0 +1,142 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://simpledesktops.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 28 May 2014 00:33:21 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '4376'
+      Connection:
+      - Keep-Alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding, User-Agent
+    body:
+      encoding: UTF-8
+      string: "\n\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n\t\"http://www.w3.org/TR/html4/strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head><script
+        type=\"text/javascript\">var NREUMQ=NREUMQ||[];NREUMQ.push([\"mark\",\"firstbyte\",new
+        Date().getTime()]);</script>\n    <meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=utf-8\"/>\n    <meta name=\"viewport\" content=\"width=1130px\" />\n
+        \   <meta name=\"p:domain_verify\" content=\"b306d0754e99628c8db2e5ee1f8f3d04\"/>\n
+        \   <title>\n         Simple Desktops\n    </title>\n\n    <link rel=\"shortcut
+        icon\" href=\"http://static.simpledesktops.com/static/favicon.ico\">\n\n    \n\n
+        \       <link rel=\"stylesheet\" href=\"http://static.simpledesktops.com/static/styles/reset.css?v=13478280\"
+        type=\"text/css\" media=\"screen\" charset=\"utf-8\">\n        <link rel=\"stylesheet\"
+        href=\"http://static.simpledesktops.com/static/styles/grid.css?v=13478280\"
+        type=\"text/css\" media=\"screen\" charset=\"utf-8\">\n        <link rel=\"stylesheet\"
+        href=\"http://static.simpledesktops.com/static/styles/main.css?v=13975810\"
+        type=\"text/css\" media=\"screen\" charset=\"utf-8\">\n        <link rel=\"stylesheet\"
+        href=\"http://static.simpledesktops.com/static/styles/app.css?v=13759279\"
+        type=\"text/css\" media=\"screen\" charset=\"utf-8\">\n    \n\n    <link href=\"http://feeds.feedburner.com/simpledesktops\"
+        rel=\"alternate\" title=\"Desktops\" type=\"application/rss+xml\" />\n\n\n</head>\n\n<body
+        class=\"\" >\n\t<div class=\"wrapper\">\n\t\t<div class=\"header\">\n\t\t\t<div
+        class=\"container\">\n\t\t\t\t<div class=\"column span-28\">\n\t\t\t\t\t<div
+        class=\"column span-9 prepend-2\">\n\t\t\t\t\t\t<h1><a href=\"/\">Simple Desktops</a></h1>\n\t\t\t\t\t</div>\n\t\t\t\t\t<ul
+        class=\"column span-15 prepend-1\">\n\t\t\t\t\t\t<li class=\"column span-2
+        browse\"><a href=\"/browse/\">Browse</a></li>\n\t\t\t\t\t\t<li class=\"column
+        span-2 mac\"><a href=\"/app/mac/\">Mac</a></li>\n\t\t\t\t\t\t<li class=\"column
+        span-2 ios\"><a href=\"/app/ios/\">iOS</a></li>\n\t\t\t\t\t\t<li class=\"column
+        span-2 android\"><a href=\"/app/android/\">Android</a>\n\t\t\t\t\t\t<li class=\"column
+        span-2 submit\"><a href=\"/submit/\">Submit</a></li>\n\t\t\t\t\t\t<li class=\"column
+        span-2 about\"><a href=\"/about/\">About</a></li>\n\t\t\t\t\t\t<li class=\"column
+        span-2 contact\"><a href=\"/contact/\">Contact</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"container\">\n\t\t\t<div class=\"column span-28\">\n\t\t\t\t\n<div
+        class=\"desktops column span-16 prepend-2 medium\">\n\t\n\t<div class=\"edge\">\n\t\t<div
+        class=\"desktop\">\n\t\t\t<a href=\"/browse/desktops/2014/may/16/pixel-moon/\">\n\t\t\t\t<img
+        src=\"http://static.simpledesktops.com/Pixelmoon_by_ArMaNDJ.png.620x390_q100.png\"
+        title=\"Pixel Moon\" alt=\"Pixel Moon\" width=\"620px\" height=\"390px\"/>\n\t\t\t</a>\n\t\t\t<h2>\n\t\t\t\t<a
+        href=\"/browse/desktops/2014/may/16/pixel-moon/\">Pixel Moon</a>\n\t\t\t</h2>\n\t\t\t<span
+        class=\"creator\">Created by: <a href=\"\">ArMaNDJ</a></span>\n\t\t</div>\n\t</div>\n\t\n\t<div
+        class=\"edge\">\n\t\t<div class=\"desktop\">\n\t\t\t<a href=\"/browse/desktops/2014/may/15/mickey-who/\">\n\t\t\t\t<img
+        src=\"http://static.simpledesktops.com/uploads/desktops/2014/05/15/Mickey_Who.png.620x390_q100.png\"
+        title=\"Mickey Who?\" alt=\"Mickey Who?\" width=\"620px\" height=\"390px\"/>\n\t\t\t</a>\n\t\t\t<h2>\n\t\t\t\t<a
+        href=\"/browse/desktops/2014/may/15/mickey-who/\">Mickey Who?</a>\n\t\t\t</h2>\n\t\t\t<span
+        class=\"creator\">Created by: <a href=\"http://www.myfantasybands.com/\">Erin
+        Rippy</a></span>\n\t\t</div>\n\t</div>\n\t\n</div>\n\n<div class=\"desktops
+        column span-8 last small\">\n\t<div class=\"edge\">\n\t\t<div class=\"blurb\">\n\t\t\t<h3>About
+        Simple Desktops</h3>\n\t\t\t<p>A collection of wallpapers curated by <a href=\"http://tmwtsn.com/\">Tom
+        Watson</a> designed to make your computer beautiful without distraction. <a
+        href=\"/about/\">Find out more</a> or <a href=\"/submit/\">submit one</a>.</p>\n\t\t\t<div
+        class=\"social\">\n\t\t\t\t<span class=\"like\">\n\t\t\t\t\t<script src=\"http://connect.facebook.net/en_US/all.js#xfbml=1\"></script><fb:like
+        href=\"http://facebook.com/simpledesktops\" layout=\"button_count\" show_faces=\"true\"
+        font=\"\"></fb:like>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"tweet\">\n\t\t\t\t\t<a
+        href=\"https://twitter.com/simpledesktops\" class=\"twitter-follow-button\"
+        data-show-count=\"false\">Follow @simpledesktops</a>\n\t\t\t\t\t<script>!function(d,s,id){var
+        js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,
+        'script', 'twitter-wjs');</script>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"pinterest\">\n\t\t\t\t\t<a
+        data-pin-do=\"buttonFollow\" href=\"http://pinterest.com/simpledesktops/\">Simple
+        Desktops</a>\n\t\t\t\t</span>\n\t\t\t\t<span class=\"rss\">\n\t\t\t\t\t<a
+        href=\"feed://feeds.feedburner.com/simpledesktops\"class=\"rss-subscribe\">Subscribe</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div
+        class=\"edge\">\n\t<div class=\"ad\">\n\t\t<script type=\"text/javascript\">document.write('<scr'
+        + 'ipt type=\"text/javascript\" src=\"http://adn.fusionads.net/www/pull/get.php?zoneid=73&charset=UTF-8&withtext=1&cb='
+        + Math.floor(Math.random() * 99999999999) + '\"></scr' + 'ipt>');</script><br
+        /><a href=\"http://fusionads.net\" title=\"Powered by Fusion Ads\" class=\"adby\">ads
+        Powered by Fusion</a>\n\t</div>\n</div>\n\n\t\n\t<div class=\"edge\">\n\t\t<div
+        class=\"desktop\">\n\t\t\t<a href=\"/browse/desktops/2014/apr/24/rainy-day/\">\n\t\t\t\t<img
+        src=\"http://static.simpledesktops.com/uploads/desktops/2014/04/24/rainyDay_2880x1800.png.300x189_q100.png\"
+        title=\"Rainy Day\" alt=\"Rainy Day\" width=\"300px\" height=\"189px\" />\n\t\t\t</a>\n\t\t\t<h2><a
+        href=\"/browse/desktops/2014/apr/24/rainy-day/\">Rainy Day</a></h2>\n\t\t\t<span
+        class=\"creator\">By: <a href=\"http://www.krisvanwitsen.com/\">Kris van Witsen</a></span>\n\t\t</div>\n\t</div>\n\t\n\t<div
+        class=\"edge\">\n\t\t<div class=\"desktop\">\n\t\t\t<a href=\"/browse/desktops/2014/apr/24/high-point/\">\n\t\t\t\t<img
+        src=\"http://static.simpledesktops.com/uploads/desktops/2014/04/24/highPoint_2880x1800.png.300x189_q100.png\"
+        title=\"High Point\" alt=\"High Point\" width=\"300px\" height=\"189px\" />\n\t\t\t</a>\n\t\t\t<h2><a
+        href=\"/browse/desktops/2014/apr/24/high-point/\">High Point</a></h2>\n\t\t\t<span
+        class=\"creator\">By: <a href=\"http://www.krisvanwitsen.com/\">Kris van Witsen</a></span>\n\t\t</div>\n\t</div>\n\t\n</div>\n\n<div
+        class=\"column span-24 prepend-2\">\n\t\n\t<div class=\"edge\">\n\t\t<div
+        class=\"desktop\">\n\t\t\t<a href=\"/browse/desktops/2014/apr/16/black-diamonds/\">\n\t\t\t\t<img
+        src=\"http://static.simpledesktops.com/uploads/desktops/2014/04/23/Black_Diamonds.png.943x630_q100.png\"
+        title=\"Black Diamonds\" alt=\"Black Diamonds\" width=\"943px\" height=\"630px\"
+        />\n\t\t\t</a>\n\t\t\t<h2 class=\"title\"><a href=\"/browse/desktops/2014/apr/16/black-diamonds/\">Black
+        Diamonds</a></h2>\n\t\t\t<span class=\"creator\">Created by: <a href=\"http://www.joy-vincent.com/\">Joy-Vincent
+        Niemantsverdriet</a></span>\n\t\t</div>\n\t</div>\n\t\n\t<div class=\"edge\">\n\t\t<div
+        class=\"desktop\">\n\t\t\t<a href=\"/browse/desktops/2014/apr/15/subtle-ocean/\">\n\t\t\t\t<img
+        src=\"http://static.simpledesktops.com/uploads/desktops/2014/04/15/Subtle_Ocean.jpg.943x630_q100.png\"
+        title=\"Subtle Ocean\" alt=\"Subtle Ocean\" width=\"943px\" height=\"630px\"
+        />\n\t\t\t</a>\n\t\t\t<h2 class=\"title\"><a href=\"/browse/desktops/2014/apr/15/subtle-ocean/\">Subtle
+        Ocean</a></h2>\n\t\t\t<span class=\"creator\">Created by: <a href=\"\">Robbie
+        Bisconti</a></span>\n\t\t</div>\n\t</div>\n\t\n\t<div class=\"edge\">\n\t\t<div
+        class=\"desktop\">\n\t\t\t<a href=\"/browse/desktops/2014/apr/14/polygon-madonna/\">\n\t\t\t\t<img
+        src=\"http://static.simpledesktops.com/uploads/desktops/2014/04/14/Madonna-Polygon2.png.943x630_q100.png\"
+        title=\"Polygon Madonna\" alt=\"Polygon Madonna\" width=\"943px\" height=\"630px\"
+        />\n\t\t\t</a>\n\t\t\t<h2 class=\"title\"><a href=\"/browse/desktops/2014/apr/14/polygon-madonna/\">Polygon
+        Madonna</a></h2>\n\t\t\t<span class=\"creator\">Created by: <a href=\"https://www.behance.net/yagofarias\">Yago
+        Farias</a></span>\n\t\t</div>\n\t</div>\n\t\n\t<div class=\"edge\">\n\t\t<div
+        class=\"desktop\">\n\t\t\t<a href=\"/browse/desktops/2014/apr/04/floppydsk/\">\n\t\t\t\t<img
+        src=\"http://static.simpledesktops.com/uploads/desktops/2014/04/04/floppies0005.png.943x630_q100.png\"
+        title=\"FloppyDsk\" alt=\"FloppyDsk\" width=\"943px\" height=\"630px\" />\n\t\t\t</a>\n\t\t\t<h2
+        class=\"title\"><a href=\"/browse/desktops/2014/apr/04/floppydsk/\">FloppyDsk</a></h2>\n\t\t\t<span
+        class=\"creator\">Created by: <a href=\"http://www.super9.tv/\">Liam Bunston</a></span>\n\t\t</div>\n\t</div>\n\t\n</div>\n<a
+        href=\"/browse/\" class=\"more\">&nbsp;</a>\n\n\t\t\t</div>\n\t\t\t\n\t\t</div>\n\t</div>\n\n\t\n\n\t<script
+        type=\"text/javascript\">\n\t\tvar gaJsHost = ((\"https:\" == document.location.protocol)
+        ? \"https://ssl.\" : \"http://www.\");document.write(unescape(\"%3Cscript
+        src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));\n\t</script>\n\t<script
+        type=\"text/javascript\">try { var pageTracker = _gat._getTracker(\"UA-11362744-1\");
+        pageTracker._trackPageview(); } catch(err) {}</script>\n\t<script type=\"text/javascript\"
+        src=\"//assets.pinterest.com/js/pinit.js\"></script>\n<script type=\"text/javascript\">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push([\"load\",new
+        Date().getTime()]);var e=document.createElement(\"script\");e.type=\"text/javascript\";e.src=((\"http:\"===document.location.protocol)?\"http:\":\"https:\")+\"//\"+\"js-agent.newrelic.com/nr-100.js\";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push([\"nrfj\",\"beacon-5.newrelic.com\",\"7ad398ecd4\",\"1116224\",\"ZABRYRNXWhICABZdC11KdUAPVUAIDA1NRw1eFV9QBVNHChcMEkdKUhVDRk9SURIIFw1EFx0TWlAWRQ4pDA4HZAVUAA==\",0,90,new
+        Date().getTime(),\"\",\"\",\"\",\"\",\"\"]);</script></body>\n</html>"
+    http_version: 
+  recorded_at: Wed, 28 May 2014 00:33:21 GMT
+recorded_with: VCR 2.9.1
