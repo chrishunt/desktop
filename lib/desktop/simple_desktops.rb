@@ -7,6 +7,10 @@ module Desktop
       thumbnail.match(/http.*?png/).to_s
     end
 
+    def latest_image
+      http.get(latest_image_url).body
+    end
+
     private
 
     def http
