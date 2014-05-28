@@ -3,7 +3,7 @@ require 'nokogiri'
 
 module Desktop
   class SimpleDesktops
-    def latest
+    def latest_image_url
       thumbnail.match(/http.*?png/).to_s
     end
 
