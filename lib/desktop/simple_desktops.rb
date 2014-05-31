@@ -4,6 +4,10 @@ require 'desktop/image'
 
 module Desktop
   class SimpleDesktops
+    def self.latest_image
+      self.new.latest_image
+    end
+
     def latest_image
       @latest_image ||= Image.new(thumbnail.match(full_image_regex).to_s)
     end
