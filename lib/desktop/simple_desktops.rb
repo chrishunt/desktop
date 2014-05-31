@@ -13,24 +13,20 @@ module Desktop
 
     private
 
-    def http
-      Faraday
-    end
-
     def url
       'http://simpledesktops.com'
     end
 
-    def body
-      http.get(url).body
-    end
-
-    def parser
-      Nokogiri::HTML(body)
+    def html
+      Nokogiri::HTML http.get(url).body
     end
 
     def thumbnail
-      parser.css('.desktop a img').first['src']
+      html.css('.desktop a img').first['src']
+    end
+
+    def http
+      Faraday
     end
 
     # http://rubular.com/r/UHYgmPJoQM
