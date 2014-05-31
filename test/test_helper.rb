@@ -7,6 +7,7 @@ require 'vcr'
 $LOAD_PATH.unshift 'lib'
 
 VCR.configure do |c|
+  # c.allow_http_connections_when_no_cassette = true
   c.cassette_library_dir = 'test/fixtures'
   c.hook_into :webmock
 end
