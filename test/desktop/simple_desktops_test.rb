@@ -12,5 +12,15 @@ module Desktop
         end
       end
     end
+
+    describe '#latest_image_filename' do
+      it 'returns the filename for the latest desktop image' do
+        VCR.use_cassette('simple_desktops_latest') do
+          assert_equal \
+            'Pixelmoon_by_ArMaNDJ.png',
+            SimpleDesktops.new.latest_image_filename
+        end
+      end
+    end
   end
 end
