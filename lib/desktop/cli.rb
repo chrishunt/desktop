@@ -23,26 +23,40 @@ module Desktop
       begin
         osx.desktop_image = image
       rescue OSX::DesktopImagePermissionsError => e
-        fail_nicely(e) if already_failed
+        fail_with_permissions_error(e) if already_failed
 
         print_permissions_message
         osx.update_desktop_image_permissions
         set path, true
+      rescue OSX::DesktopImageMissingError
+        fail_with_missing_image_error(image)
       end
     end
 
     private
 
-    def fail_nicely(exception)
+    def fail_with_permissions_error(exception)
       puts
       print "Sorry, but I was unable to change your desktop image. "
       puts  "Please create an issue if you think this is my fault:"
       puts
-      puts  "https://github.com/chrishunt/desktop/issues/new"
+      puts  issue_url
       puts
       puts  "Here's the error:"
       puts
       puts  exception
+      fail
+    end
+
+    def fail_with_missing_image_error(image)
+      puts
+      puts "Sorry, but it looks like the image you provided does not exist:"
+      puts
+      puts image.path
+      puts
+      puts "Please create an issue if you think this is my fault:"
+      puts
+      puts issue_url
       fail
     end
 
@@ -56,6 +70,10 @@ module Desktop
       puts  "$ #{OSX.chown_command}"
       puts  "$ #{OSX.chmod_command}"
       puts
+    end
+
+    def issue_url
+      "https://github.com/chrishunt/desktop/issues/new"
     end
   end
 end
