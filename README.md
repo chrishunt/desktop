@@ -7,7 +7,7 @@ Since the introduction of
 the desktop image has been a chore for those of us who enjoy the same image on
 all spaces and monitors; each has its own image that must be updated
 individually. Lucky for you, a recent breakthrough in technology had made changing
-your desktop **drag-n-drop easy**. :chart_with_upwards_trend:
+your desktop **drag-n-drop easy**.
 
 **desktop** lets us update the desktop image on every space and monitor *at the
 same time* from the command line.
