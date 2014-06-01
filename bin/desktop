@@ -2,7 +2,7 @@
 
 require 'desktop'
 
-if ARGV.size == 1 && !%w[set help].include?(ARGV.first)
+if ARGV.size == 1 && !%w[set help version].include?(ARGV.first)
   ARGV.unshift('set')
 end
 
