@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 
 require 'desktop'
-ARGV.unshift('set').uniq! if ARGV.size == 1
+
+if ARGV.size == 1 && !%w[set help].include?(ARGV.first)
+  ARGV.unshift('set')
+end
 
 Desktop::CLI.start ARGV
