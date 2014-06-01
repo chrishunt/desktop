@@ -28,19 +28,31 @@ module Desktop
         osx = OSX.new(options[:default_image_path], options[:skip_reload])
         osx.desktop_image = is_uri ? WebImage.new(path) : LocalImage.new(path)
       rescue OSX::DesktopImagePermissionsError => e
-        fail(e) if already_failed
-        print "It looks like this is the first time you've tried to change "
-        puts  "your desktop."
-        puts
-        print "We need to make your desktop image writable before we can "
-        puts  "change it. This only needs to be done once."
-        puts
-        puts "$ #{OSX.chown_command}"
-        puts "$ #{OSX.chmod_command}"
-        puts
-        osx.update_desktop_image_permissions
+        if already_failed
+          puts
+          print "Sorry, but I was unable to change your desktop image. "
+          puts  "Please create an issue if you think this is my fault:"
+          puts
+          puts  "https://github.com/chrishunt/desktop/issues/new"
+          puts
+          puts  "Here's the error:"
+          puts
+          puts  e.message
+          fail
+        else
+          print "It looks like this is the first time you've tried to change "
+          puts  "your desktop."
+          puts
+          print "We need to make your desktop image writable before we can "
+          puts  "change it. This only needs to be done once."
+          puts
+          puts  "$ #{OSX.chown_command}"
+          puts  "$ #{OSX.chmod_command}"
+          puts
+          osx.update_desktop_image_permissions
 
-        set path, true
+          set path, true
+        end
       end
     end
   end
