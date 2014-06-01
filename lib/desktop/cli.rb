@@ -1,5 +1,4 @@
 require 'thor'
-require 'uri'
 require 'desktop'
 
 module Desktop
@@ -18,15 +17,11 @@ module Desktop
     option :default_image_path, :hide => true
     option :skip_reload, :type => :boolean, :hide => true
     def set(path, already_failed = false)
-      is_uri = begin
-        %w[http https].include? URI.parse(path).scheme
-      rescue URI::BadURIError, URI::InvalidURIError
-        false
-      end
+      osx = OSX.new(options[:default_image_path], options[:skip_reload])
+      image = HTTP.uri?(path) ? WebImage.new(path) : LocalImage.new(path)
 
       begin
-        osx = OSX.new(options[:default_image_path], options[:skip_reload])
-        osx.desktop_image = is_uri ? WebImage.new(path) : LocalImage.new(path)
+        osx.desktop_image = image
       rescue OSX::DesktopImagePermissionsError => e
         if already_failed
           puts
