@@ -2,6 +2,7 @@ require 'sqlite3'
 
 module Desktop
   class OSX
+    attr_reader :desktop_image_path
     class DesktopImagePermissionsError < StandardError; end
 
     def self.desktop_image=(image)
@@ -10,6 +11,10 @@ module Desktop
 
     def self.update_desktop_image_permissions
       self.new.update_desktop_image_permissions
+    end
+
+    def initialize(desktop_image_path = nil)
+      @desktop_image_path = desktop_image_path || default_desktop_image_path
     end
 
     def desktop_image=(image)
@@ -44,7 +49,7 @@ module Desktop
       system 'killall Dock'
     end
 
-    def desktop_image_path
+    def default_desktop_image_path
       '/System/Library/CoreServices/DefaultDesktop.jpg'
     end
 
