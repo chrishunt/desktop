@@ -13,6 +13,14 @@ module Desktop
       self.new.update_desktop_image_permissions
     end
 
+    def self.chown_command
+      self.new.chown_command
+    end
+
+    def self.chmod_command
+      self.new.chmod_command
+    end
+
     def initialize(desktop_image_path = nil, skip_reload = false)
       @skip_reload = skip_reload
       @desktop_image_path = desktop_image_path || default_desktop_image_path
@@ -27,8 +35,16 @@ module Desktop
     end
 
     def update_desktop_image_permissions
-      system "sudo chown root:staff #{desktop_image_path}"
-      system "sudo chmod 664 #{desktop_image_path}"
+      system chown_command
+      system chmod_command
+    end
+
+    def chown_command
+      "sudo chown root:staff #{desktop_image_path}"
+    end
+
+    def chmod_command
+      "sudo chmod 664 #{desktop_image_path}"
     end
 
     private
