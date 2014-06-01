@@ -1,6 +1,5 @@
 require 'desktop/cli'
 require 'desktop/local_image'
 require 'desktop/osx'
-require 'desktop/source/simple_desktops'
 require 'desktop/version'
 require 'desktop/web_image'
