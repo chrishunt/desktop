@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'desktop'
+
+Desktop::CLI.start ARGV
