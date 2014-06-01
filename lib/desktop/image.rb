@@ -1,19 +1,17 @@
-require 'desktop/http'
-
 module Desktop
   class Image
-    attr_reader :url
+    attr_reader :path
 
-    def initialize(url)
-      @url = url
+    def initialize(path)
+      @path = path
     end
 
     def filename
-      File.basename url
+      File.basename path
     end
 
     def data
-      HTTP.get(url).body
+      raise NotImplementedError
     end
   end
 end

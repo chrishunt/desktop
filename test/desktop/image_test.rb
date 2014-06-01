@@ -5,16 +5,15 @@ module Desktop
   describe Image do
     describe '#filename' do
       it 'returns the image filename' do
-        image = Image.new('http://simpledesktops.com/Pixelmoon_by_ArMaNDJ.png')
-        assert_equal 'Pixelmoon_by_ArMaNDJ.png', image.filename
+        assert_equal 'image.png', Image.new('/path/to/image.png').filename
+        assert_equal 'image.png', Image.new('http://abc.com/image.png').filename
       end
     end
 
     describe '#data' do
-      it 'returns the file data for this image' do
-        VCR.use_cassette('image_data') do
-          url = 'http://f.cl.ly/items/233u2R2a2j0n403z0W1y/20130427.jpg'
-          refute_nil Image.new(url).data
+      it 'needs to be implemented' do
+        assert_raises NotImplementedError do
+          Image.new('/path/to/image').data
         end
       end
     end

@@ -19,11 +19,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - 63Ac6Vr+KZycj2nlKKZI7ULYcQFIA2loPVbX0x2NtFru75iFUqvSC9v31HM9duIh
+      - cLhmLKpYF5MrjfsMr3nAkq9S0PocVFRGLwHZixLZNb8pB/Sj9HLUJKR/AVaeJoa5
       X-Amz-Request-Id:
-      - 68053BB1F7F505E9
+      - CA2EB1CA632635AC
       Date:
-      - Sat, 31 May 2014 20:16:51 GMT
+      - Sun, 01 Jun 2014 02:54:11 GMT
       Last-Modified:
       - Sat, 31 May 2014 20:13:34 GMT
       Etag:
@@ -1664,5 +1664,5 @@ http_interactions:
         btVdw2onn41mzR/m2JqOh7SwX1f6fb/Wp19jesioqDxryziXBrWx2KiMXWgB
         KACgA++gD//Z
     http_version: 
-  recorded_at: Sat, 31 May 2014 20:16:50 GMT
+  recorded_at: Sun, 01 Jun 2014 02:54:11 GMT
 recorded_with: VCR 2.9.1
