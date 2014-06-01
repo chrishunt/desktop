@@ -23,32 +23,38 @@ module Desktop
       begin
         osx.desktop_image = image
       rescue OSX::DesktopImagePermissionsError => e
-        if already_failed
-          puts
-          print "Sorry, but I was unable to change your desktop image. "
-          puts  "Please create an issue if you think this is my fault:"
-          puts
-          puts  "https://github.com/chrishunt/desktop/issues/new"
-          puts
-          puts  "Here's the error:"
-          puts
-          puts  e.message
-          fail
-        else
-          print "It looks like this is the first time you've tried to change "
-          puts  "your desktop."
-          puts
-          print "We need to make your desktop image writable before we can "
-          puts  "change it. This only needs to be done once."
-          puts
-          puts  "$ #{OSX.chown_command}"
-          puts  "$ #{OSX.chmod_command}"
-          puts
-          osx.update_desktop_image_permissions
+        print_failure_message(e) && fail if already_failed
 
-          set path, true
-        end
+        print_permissions_message
+        osx.update_desktop_image_permissions
+        set path, true
       end
+    end
+
+    private
+
+    def print_failure_message(exception)
+      puts
+      print "Sorry, but I was unable to change your desktop image. "
+      puts  "Please create an issue if you think this is my fault:"
+      puts
+      puts  "https://github.com/chrishunt/desktop/issues/new"
+      puts
+      puts  "Here's the error:"
+      puts
+      puts  exception.message
+    end
+
+    def print_permissions_message
+      print "It looks like this is the first time you've tried to change "
+      puts  "your desktop."
+      puts
+      print "We need to make your desktop image writable before we can "
+      puts  "change it. This only needs to be done once."
+      puts
+      puts  "$ #{OSX.chown_command}"
+      puts  "$ #{OSX.chmod_command}"
+      puts
     end
   end
 end
