@@ -8,7 +8,7 @@ module Desktop
         VCR.use_cassette('simple_desktops_latest') do
           assert_equal \
             'http://static.simpledesktops.com/Pixelmoon_by_ArMaNDJ.png',
-            SimpleDesktops.new.latest_image.url
+            SimpleDesktops.new.latest_image.path
         end
       end
     end
