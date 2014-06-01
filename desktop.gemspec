@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Desktop::VERSION
   spec.authors       = ["Chris Hunt"]
   spec.email         = ["c@chrishunt.co"]
-  spec.summary       = %q{Update your desktop from the command line}
-  spec.description   = %q{Update your desktop from the command line}
+  spec.summary       = %q{A decent way to change your desktop image}
+  spec.description   = %q{A decent way to change your desktop image}
   spec.homepage      = "https://github.com/chrishunt/desktop"
   spec.license       = "MIT"
 
