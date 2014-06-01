@@ -23,28 +23,25 @@ module Desktop
       begin
         osx.desktop_image = image
       rescue OSX::DesktopImagePermissionsError => e
-        fail_with_permissions_error(e) if already_failed
+        fail_with_permissions_error if already_failed
 
         print_permissions_message
         osx.update_desktop_image_permissions
         set path, true
       rescue OSX::DesktopImageMissingError
-        fail_with_missing_image_error(image)
+        fail_with_missing_image_error image
       end
     end
 
     private
 
-    def fail_with_permissions_error(exception)
+    def fail_with_permissions_error
       puts
       print "Sorry, but I was unable to change your desktop image. "
-      puts  "Please create an issue if you think this is my fault:"
+      puts  "The permissions are still incorrect."
       puts
-      puts  issue_url
-      puts
-      puts  "Here's the error:"
-      puts
-      puts  exception
+      puts  "Did you type your password incorrectly?"
+      print_issues_message
       fail
     end
 
@@ -53,10 +50,7 @@ module Desktop
       puts "Sorry, but it looks like the image you provided does not exist:"
       puts
       puts image.path
-      puts
-      puts "Please create an issue if you think this is my fault:"
-      puts
-      puts issue_url
+      print_issues_message
       fail
     end
 
@@ -72,8 +66,11 @@ module Desktop
       puts
     end
 
-    def issue_url
-      "https://github.com/chrishunt/desktop/issues/new"
+    def print_issues_message
+      puts
+      puts "Please create an issue if you think this is my fault:"
+      puts
+      puts "https://github.com/chrishunt/desktop/issues/new"
     end
   end
 end
