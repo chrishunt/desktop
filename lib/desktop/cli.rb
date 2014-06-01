@@ -24,8 +24,7 @@ module Desktop
         osx.desktop_image = image
       rescue OSX::DesktopImagePermissionsError => e
         if already_failed
-          print_failure_message(e)
-          fail
+          fail_nicely e
         else
           print_permissions_message
           osx.update_desktop_image_permissions
@@ -36,7 +35,7 @@ module Desktop
 
     private
 
-    def print_failure_message(exception)
+    def fail_nicely(exception)
       puts
       print "Sorry, but I was unable to change your desktop image. "
       puts  "Please create an issue if you think this is my fault:"
@@ -45,7 +44,8 @@ module Desktop
       puts
       puts  "Here's the error:"
       puts
-      puts  exception.message
+      puts  exception
+      fail
     end
 
     def print_permissions_message
