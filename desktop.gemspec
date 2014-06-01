@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["c@chrishunt.co"]
   spec.summary       = %q{Update your desktop from the command line}
   spec.description   = %q{Update your desktop from the command line}
-  spec.homepage      = "http://chrishunt.co/desktop"
+  spec.homepage      = "https://github.com/chrishunt/desktop"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
