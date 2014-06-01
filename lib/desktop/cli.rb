@@ -1,4 +1,5 @@
 require 'thor'
+require 'uri'
 require 'desktop'
 
 module Desktop
@@ -9,13 +10,23 @@ module Desktop
       the image at `IMAGE_PATH`.
 
       > $ desktop set /path/to/image.png
+
+      `IMAGE_PATH` can be a local file path or a URL.
+
+      > $ desktop set http://url.to/image.jpg
     LONGDESC
     option :default_image_path, :hide => true
     option :skip_reload, :type => :boolean, :hide => true
     def set(path, already_failed = false)
+      is_uri = begin
+        %w[http https].include? URI.parse(path).scheme
+      rescue URI::BadURIError, URI::InvalidURIError
+        false
+      end
+
       begin
         osx = OSX.new(options[:default_image_path], options[:skip_reload])
-        osx.desktop_image = LocalImage.new(path)
+        osx.desktop_image = is_uri ? WebImage.new(path) : LocalImage.new(path)
       rescue OSX::DesktopImagePermissionsError => e
         fail(e) if already_failed
         print "It looks like this is the first time you've tried to change "

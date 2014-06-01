@@ -28,10 +28,18 @@ module Desktop
       image.unlink
     end
 
-    it 'sets the desktop when an image path is provided' do
+    it 'sets the desktop when a local image path is provided' do
       with_new_image do |image|
         cli 'set', image.path do |desktop|
           assert_equal File.read(desktop), File.read(image)
+        end
+      end
+    end
+
+    it 'sets the desktop when a web url is provided' do
+      VCR.use_cassette('web_image_data') do
+        cli 'set', 'http://f.cl.ly/image.jpg' do |desktop|
+          refute_equal 'Default content', File.read(desktop)
         end
       end
     end
