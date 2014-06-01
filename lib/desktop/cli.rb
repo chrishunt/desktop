@@ -42,7 +42,7 @@ module Desktop
       puts
       puts  "Did you type your password incorrectly?"
       print_issues_message
-      fail
+      abort
     end
 
     def fail_with_missing_image_error(image)
@@ -51,7 +51,7 @@ module Desktop
       puts
       puts image.path
       print_issues_message
-      fail
+      abort
     end
 
     def print_permissions_message
