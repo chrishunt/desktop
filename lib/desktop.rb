@@ -1,1 +1,8 @@
+require 'desktop/cli'
+require 'desktop/http'
+require 'desktop/image'
+require 'desktop/local_image'
+require 'desktop/osx'
+require 'desktop/simple_desktops'
 require 'desktop/version'
+require 'desktop/web_image'
