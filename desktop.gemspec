@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Desktop::VERSION
   spec.authors       = ["Chris Hunt"]
   spec.email         = ["c@chrishunt.co"]
-  spec.summary       = %q{Simple Desktops curated by Tom Watson}
-  spec.description   = %q{Simple Desktops curated by Tom Watson}
-  spec.homepage      = "https://github.com/chrishunt/desktop"
+  spec.summary       = %q{Update your desktop from the command line}
+  spec.description   = %q{Update your desktop from the command line}
+  spec.homepage      = "http://chrishunt.co/desktop"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
