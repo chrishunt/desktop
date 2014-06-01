@@ -23,11 +23,14 @@ module Desktop
       begin
         osx.desktop_image = image
       rescue OSX::DesktopImagePermissionsError => e
-        print_failure_message(e) && fail if already_failed
-
-        print_permissions_message
-        osx.update_desktop_image_permissions
-        set path, true
+        if already_failed
+          print_failure_message(e)
+          fail
+        else
+          print_permissions_message
+          osx.update_desktop_image_permissions
+          set path, true
+        end
       end
     end
 
