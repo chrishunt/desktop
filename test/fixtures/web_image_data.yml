@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://f.cl.ly/items/233u2R2a2j0n403z0W1y/20130427.jpg
+    uri: http://f.cl.ly/image.jpg
     body:
       encoding: US-ASCII
       string: ''
