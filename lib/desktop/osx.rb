@@ -4,6 +4,7 @@ module Desktop
   class OSX
     attr_reader :desktop_image_path, :skip_reload
     class DesktopImagePermissionsError < StandardError; end
+    class DesktopImageMissingError < StandardError; end
 
     def self.desktop_image=(image)
       self.new.desktop_image = image
@@ -32,6 +33,8 @@ module Desktop
       reload_desktop unless skip_reload
     rescue Errno::EACCES => e
       raise DesktopImagePermissionsError.new(e)
+    rescue Errno::ENOENT => e
+      raise DesktopImageMissingError.new(e)
     end
 
     def update_desktop_image_permissions

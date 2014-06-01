@@ -25,6 +25,14 @@ module Desktop
           end
         end
       end
+
+      it 'raises DesktopImageMissingError when new image is missing' do
+        osx do |osx, _, _|
+          assert_raises OSX::DesktopImageMissingError do
+            osx.desktop_image = LocalImage.new('/invalid/image/path.jpg')
+          end
+        end
+      end
     end
   end
 end
