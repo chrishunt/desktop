@@ -4,7 +4,7 @@ require 'desktop/image'
 module Desktop
   class WebImage < Image
     def data
-      HTTP.get(path).body
+      HTTP.connection.get(path).body
     end
   end
 end

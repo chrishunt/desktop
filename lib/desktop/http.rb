@@ -1,5 +1,9 @@
 require 'faraday'
 
 module Desktop
-  HTTP = Faraday
+  class HTTP
+    def self.connection
+      Faraday
+    end
+  end
 end
