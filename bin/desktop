@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'desktop'
+ARGV.unshift('set').uniq! if ARGV.size == 1
 
 Desktop::CLI.start ARGV
