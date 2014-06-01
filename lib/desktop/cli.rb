@@ -34,6 +34,11 @@ module Desktop
       end
     end
 
+    desc 'version', 'Show gem version'
+    def version
+      puts Desktop::VERSION
+    end
+
     private
 
     def fail_with_permissions_error

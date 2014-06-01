@@ -31,6 +31,7 @@ $ desktop help
 Commands:
   desktop help [COMMAND]  # Describe available commands or one specific command
   desktop set IMAGE_PATH  # Set all desktops to the image at IMAGE_PATH
+  desktop version         # Show gem version
 ```
 
 Desktop images can be set using a file path:
