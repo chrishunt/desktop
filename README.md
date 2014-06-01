@@ -1,29 +1,86 @@
 # Desktop
 
-TODO: Write a gem description
+### A decent way to change your desktop image.
+
+Since the introduction of
+[Spaces](http://en.wikipedia.org/wiki/Spaces_(software)) in Mac OS X, changing
+the desktop image has been a chore for those of us who enjoy the same image on
+all spaces and monitors; each has its own image that must be updated
+individually. Lucky for you, a recent breakthrough in technology had made changing
+your desktop **drag-n-drop easy**. :chart_with_upwards_trend:
+
+**desktop** lets us update the desktop image on every space and monitor *at the
+same time* from the command line.
+
+![](img/example.gif)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+**desktop** can be installed from [RubyGems](http://rubygems.org/gems/desktop).
 
-    gem 'desktop'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install desktop
+```bash
+$ gem install desktop
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Usage can be seen from the command line:
+
+```bash
+$ desktop help
+Commands:
+  desktop help [COMMAND]  # Describe available commands or one specific command
+  desktop set IMAGE_PATH  # Set all desktops to the image at IMAGE_PATH
+```
+
+Desktop images can be set using a file path:
+
+```bash
+$ desktop set /path/to/image.jpg
+```
+
+Or a web URL:
+
+```bash
+$ desktop set http://desktops.amazing/image.jpg
+```
+
+The `set` command is optional:
+
+```bash
+$ desktop /path/to/image.jpg
+```
+
+### Usage in your awesome app
+
+Want to include the features of **desktop** in your awesome app? Please do!
+
+Add the gem to your Gemfile:
+
+```ruby
+gem 'desktop'
+```
+
+Require the library:
+
+```ruby
+require 'desktop'
+```
+
+And use the same CLI interface that you already know:
+```ruby
+Desktop::CLI.start %w[set path/to/image.jpg]
+```
+
 
 ## Contributing
+Please see the [Contributing
+Document](https://github.com/chrishunt/desktop/blob/master/CONTRIBUTING.md)
 
-1. Fork it ( https://github.com/[my-github-username]/desktop/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+## Changelog
+Please see the [Changelog
+Document](https://github.com/chrishunt/desktop/blob/master/CHANGELOG.md)
+
+## License
+Copyright (C) 2014 Chris Hunt, [MIT
+License](https://github.com/chrishunt/desktop/blob/master/LICENSE.txt)
