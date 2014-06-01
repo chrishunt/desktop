@@ -9,7 +9,8 @@ module Desktop
       desktop.rewind
 
       CLI.start Array(args) + [
-        "--default-image-path=#{desktop.path}"
+        "--default-image-path=#{desktop.path}",
+        "--skip-reload"
       ]
 
       yield desktop

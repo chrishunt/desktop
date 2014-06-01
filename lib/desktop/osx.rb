@@ -2,7 +2,7 @@ require 'sqlite3'
 
 module Desktop
   class OSX
-    attr_reader :desktop_image_path
+    attr_reader :desktop_image_path, :skip_reload
     class DesktopImagePermissionsError < StandardError; end
 
     def self.desktop_image=(image)
@@ -13,14 +13,15 @@ module Desktop
       self.new.update_desktop_image_permissions
     end
 
-    def initialize(desktop_image_path = nil)
+    def initialize(desktop_image_path = nil, skip_reload = false)
+      @skip_reload = skip_reload
       @desktop_image_path = desktop_image_path || default_desktop_image_path
     end
 
     def desktop_image=(image)
       write_default_desktop image
       clear_custom_desktop_image
-      reload_desktop
+      reload_desktop unless skip_reload
     rescue Errno::EACCES => e
       raise DesktopImagePermissionsError.new(e)
     end
