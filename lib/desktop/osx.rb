@@ -35,8 +35,7 @@ module Desktop
     end
 
     def update_desktop_image_permissions
-      system chown_command
-      system chmod_command
+      system(chown_command) && system(chmod_command)
     end
 
     def chown_command
