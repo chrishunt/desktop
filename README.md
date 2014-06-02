@@ -73,6 +73,19 @@ And use the same CLI interface that you already know:
 Desktop::CLI.start %w[set path/to/image.jpg]
 ```
 
+## Where can I get desktops?
+
+[**Simple Desktops**](http://simpledesktops.com) - A collection of wallpapers
+curated by [Tom Watson](http://tmwtsn.com) designed to make your computer
+beautiful without distraction.
+
+[![](img/simple-desktops.jpg)](http://simpledesktops.com)
+
+[**Vladstudio**](http://www.vladstudio.com/wallpapers) - The project of Russian
+digital artist [Vlad Gerasimov](http://www.vladstudio.com/blog). He creates
+wallpapers for computers and mobile devices.
+
+[![](img/vladstudio.jpg)](http://www.vladstudio.com/wallpapers)
 
 ## Contributing
 Please see the [Contributing
