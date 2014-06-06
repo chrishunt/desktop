@@ -13,8 +13,9 @@ module Desktop
       image.rewind
 
       defaults = [
-        "--default-image-path=#{desktop.path}",
-        "--skip-reload"
+        "--desktop-image-path=#{desktop.path}",
+        "--skip-reload",
+        "--skip-database"
       ]
 
       yield desktop, image, defaults

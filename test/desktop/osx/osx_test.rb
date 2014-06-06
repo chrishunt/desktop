@@ -7,7 +7,12 @@ module Desktop
     def osx
       desktop = Tempfile.new(%w[desktop .jpg])
       image   = Tempfile.new(%w[image .jpg])
-      osx     = OSX.new(desktop.path, true)
+
+      osx = OSX.new(
+        :desktop_image_path => desktop.path,
+        :skip_reload        => true,
+        :skip_database      => true
+      )
 
       yield osx, desktop, image
     ensure
