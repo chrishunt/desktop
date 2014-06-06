@@ -29,7 +29,6 @@ module Desktop
 
     def desktop_image=(image)
       write_default_desktop image
-      clear_custom_desktop_image
       reload_desktop unless skip_reload
     rescue Errno::EACCES => e
       raise DesktopImagePermissionsError.new(e)
@@ -55,13 +54,6 @@ module Desktop
       File.open(desktop_image_path, 'w') do |desktop|
         desktop.write image.data
       end
-    end
-
-    def clear_custom_desktop_image
-      db = SQLite3::Database.new(desktop_image_db_path)
-      db.execute 'DELETE FROM data'
-      db.execute 'VACUUM data'
-      db.close
     end
 
     def reload_desktop
