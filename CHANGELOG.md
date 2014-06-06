@@ -1,5 +1,10 @@
 # Changelog
 
+##v1.1.1
+*2014-06-06*
+
+- [Don't blow up if OSX is missing data table](https://github.com/chrishunt/desktop/pull/8)
+
 ##v1.1.0
 *2014-06-01*
 
