@@ -1,5 +1,7 @@
 # Desktop
 
+[![Build Status](https://travis-ci.org/chrishunt/desktop.svg)](https://travis-ci.org/chrishunt/desktop)
+
 ### A decent way to change your desktop image.
 
 Since the introduction of
