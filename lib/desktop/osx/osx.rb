@@ -1,4 +1,4 @@
-require 'sqlite3'
+require 'desktop/osx/database'
 
 module Desktop
   class OSX
@@ -58,9 +58,8 @@ module Desktop
     end
 
     def clear_custom_desktop_image
-      db = SQLite3::Database.new(desktop_image_db_path)
-      db.execute 'DELETE FROM data'
-      db.execute 'VACUUM data'
+      db = Database.new
+      db.clear_desktop_image
       db.close
     end
 
@@ -70,10 +69,6 @@ module Desktop
 
     def default_desktop_image_path
       '/System/Library/CoreServices/DefaultDesktop.jpg'
-    end
-
-    def desktop_image_db_path
-      File.expand_path '~/Library/Application Support/Dock/desktoppicture.db'
     end
   end
 end
