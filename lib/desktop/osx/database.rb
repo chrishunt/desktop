@@ -10,7 +10,7 @@ module Desktop
       end
 
       def clear_desktop_image
-        clear_data
+        clear_data if data?
       end
 
       def close
@@ -18,6 +18,12 @@ module Desktop
       end
 
       private
+
+      def data?
+        connection.execute(
+          "SELECT name FROM sqlite_master WHERE type='table' AND name='data'"
+        ).any?
+      end
 
       def clear_data
         connection.execute 'DELETE FROM data'

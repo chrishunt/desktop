@@ -23,6 +23,16 @@ module Desktop
           assert_empty connection.execute("SELECT * FROM data")
         end
       end
+
+      it 'does not blow up if data table does not exist' do
+        with_connection do |connection|
+          assert_empty connection.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' AND name='data'"
+          )
+
+          OSX::Database.new(connection).clear_desktop_image
+        end
+      end
     end
   end
 end
