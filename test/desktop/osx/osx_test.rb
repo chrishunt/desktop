@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'desktop/osx'
+require 'desktop/osx/osx'
 require 'desktop/local_image'
 
 module Desktop
