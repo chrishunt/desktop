@@ -89,6 +89,12 @@ wallpapers for computers and mobile devices.
 
 [![](img/vladstudio.jpg)](http://www.vladstudio.com/wallpapers)
 
+[**Smashing Magazine**](http://www.smashingmagazine.com/tag/wallpapers) -
+Desktop Wallpaper Calendars created by artists across the globe. Every wallpaper
+has two versions: with a calendar and without a calendar.
+
+[![](img/smashing-magazine.jpg)](http://www.smashingmagazine.com/tag/wallpapers)
+
 ## Contributing
 Please see the [Contributing
 Document](https://github.com/chrishunt/desktop/blob/master/CONTRIBUTING.md)
