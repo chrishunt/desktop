@@ -1,7 +1,7 @@
 # Desktop
 
 [![Build Status](https://travis-ci.org/chrishunt/desktop.svg)](https://travis-ci.org/chrishunt/desktop)
-[![Code Climate](https://codeclimate.com/github/chrishunt/desktop.png)](https://codeclimate.com/github/chrishunt/desktop)
+[![Code Climate](https://codeclimate.com/github/chrishunt/desktop.svg)](https://codeclimate.com/github/chrishunt/desktop)
 
 ### A decent way to change your desktop image.
 
