@@ -1,7 +1,8 @@
 # Desktop
 
-[![Build Status](https://travis-ci.org/chrishunt/desktop.svg)](https://travis-ci.org/chrishunt/desktop)
-[![Code Climate](https://codeclimate.com/github/chrishunt/desktop.svg)](https://codeclimate.com/github/chrishunt/desktop)
+[![](http://img.shields.io/travis/chrishunt/desktop.svg?style=flat)](https://travis-ci.org/chrishunt/desktop)
+[![](http://img.shields.io/codeclimate/github/chrishunt/desktop.svg?style=flat)](https://codeclimate.com/github/chrishunt/desktop)
+[![](http://img.shields.io/gem/v/desktop.svg?style=flat)](http://rubygems.org/gems/desktop)
 
 ### A decent way to change your desktop image.
 
