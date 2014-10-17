@@ -33,6 +33,7 @@ module Desktop
     def desktop_image=(image)
       write_default_desktop image
       clear_custom_desktop_image unless skip_database
+      touch_desktop_image
       reload_desktop unless skip_reload
     rescue Errno::EACCES => e
       raise DesktopImagePermissionsError.new(e)
@@ -45,11 +46,15 @@ module Desktop
     end
 
     def chown_command
-      "sudo chown root:staff #{desktop_image_path}"
+      [' -h ', ' '].map do |option|
+        "sudo chown#{option}$('whoami'):staff #{desktop_image_path}"
+      end.join(" && ")
     end
 
     def chmod_command
-      "sudo chmod 664 #{desktop_image_path}"
+      [' -h ', ' '].map do |option|
+        "sudo chmod#{option}664 #{desktop_image_path}"
+      end.join(" && ")
     end
 
     private
@@ -64,6 +69,12 @@ module Desktop
       db = Database.new
       db.clear_desktop_image
       db.close
+    end
+
+    def touch_desktop_image
+      unless system("touch -h #{desktop_image_path} 2>/dev/null")
+        raise Errno::EACCES
+      end
     end
 
     def reload_desktop
