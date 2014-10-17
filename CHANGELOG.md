@@ -1,5 +1,11 @@
 # Changelog
 
+##v1.1.2
+*2014-10-17*
+
+- [Yosemite compatibility](https://github.com/chrishunt/desktop/pull/18)
+- [Update gem dependencies](https://github.com/chrishunt/desktop/pull/16)
+
 ##v1.1.1
 *2014-06-06*
 
