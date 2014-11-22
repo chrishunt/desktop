@@ -34,6 +34,7 @@ module Desktop
       write_default_desktop image
       clear_custom_desktop_image unless skip_database
       touch_desktop_image
+      remove_cached_desktop_png
       reload_desktop unless skip_reload
     rescue Errno::EACCES => e
       raise DesktopImagePermissionsError.new(e)
@@ -77,8 +78,18 @@ module Desktop
       end
     end
 
+    def remove_cached_desktop_png
+      if File.file? default_cached_desktop_path
+        system("sudo rm -rf #{default_cached_desktop_path}")
+      end
+    end
+
     def reload_desktop
       system 'killall Dock'
+    end
+
+    def default_cached_desktop_path
+      '/Library/Caches/com.apple.desktop.admin.png'
     end
 
     def default_desktop_image_path

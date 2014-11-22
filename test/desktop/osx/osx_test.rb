@@ -14,6 +14,12 @@ module Desktop
         :skip_database      => true
       )
 
+      # stub out default_cache_path so system is modified during tests
+      def osx.default_cached_desktop_path
+        cache   = Tempfile.new(%w[cache .png])
+        cache.path
+      end
+
       yield osx, desktop, image
     ensure
       desktop.unlink
@@ -35,6 +41,17 @@ module Desktop
         osx do |osx, _, _|
           assert_raises OSX::DesktopImageMissingError do
             osx.desktop_image = LocalImage.new('/invalid/image/path.jpg')
+          end
+        end
+      end
+
+      it 'ensure clean up cache admin png' do
+        osx do |osx, desktop, image|
+          assert_equal File.file?(osx.default_cached_desktop_path), true
+
+          assert_send [osx, :remove_cached_desktop_png] do
+            osx.desktop_image = LocalImage.new(image)
+            assert_equal File.file?(osx.default_cached_desktop_path), false
           end
         end
       end
