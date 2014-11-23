@@ -27,13 +27,15 @@ module Desktop
       @skip_database = options[:skip_database]
       @desktop_image_path = \
         options[:desktop_image_path] || default_desktop_image_path
+      @cached_image_path = \
+        options[:cached_image_path] || default_cached_image_path
     end
 
     def desktop_image=(image)
       write_default_desktop image
       clear_custom_desktop_image unless skip_database
       touch_desktop_image
-      remove_cached_desktop_png
+      remove_cached_image
       reload_desktop unless skip_reload
     rescue Errno::EACCES => e
       raise DesktopImagePermissionsError.new(e)
@@ -60,6 +62,7 @@ module Desktop
     private
 
     attr_reader :desktop_image_path,
+                :cached_image_path,
                 :skip_reload,
                 :skip_database
 
@@ -81,17 +84,15 @@ module Desktop
       end
     end
 
-    def remove_cached_desktop_png
-      if File.file? default_cached_desktop_path
-        system("sudo rm -rf #{default_cached_desktop_path}")
-      end
+    def remove_cached_image
+      system "rm #{cached_image_path} 2>/dev/null"
     end
 
     def reload_desktop
       system 'killall Dock'
     end
 
-    def default_cached_desktop_path
+    def default_cached_image_path
       '/Library/Caches/com.apple.desktop.admin.png'
     end
 
