@@ -2,7 +2,6 @@ require 'desktop/osx/database'
 
 module Desktop
   class OSX
-    attr_reader :desktop_image_path, :skip_reload, :skip_database
     class DesktopImagePermissionsError < StandardError; end
     class DesktopImageMissingError < StandardError; end
 
@@ -59,6 +58,10 @@ module Desktop
     end
 
     private
+
+    attr_reader :desktop_image_path,
+                :skip_reload,
+                :skip_database
 
     def write_default_desktop(image)
       File.open(desktop_image_path, 'w') do |desktop|
