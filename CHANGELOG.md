@@ -1,5 +1,10 @@
 # Changelog
 
+##v1.2.0
+*2014-11-22*
+
+- [Remove cached desktop image](https://github.com/chrishunt/desktop/pull/20)
+
 ##v1.1.2
 *2014-10-17*
 
