@@ -15,6 +15,7 @@ module Desktop
       > $ desktop set http://url.to/image.jpg
     LONGDESC
     option :desktop_image_path, :hide => true
+    option :cached_image_path, :hide => true
     option :skip_reload, :type => :boolean, :hide => true
     option :skip_database, :type => :boolean, :hide => true
     def set(path, already_failed = false)
