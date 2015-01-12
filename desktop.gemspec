@@ -27,5 +27,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry",      "~> 0.10.1"
   spec.add_development_dependency "rake",     "~> 10.4.2"
   spec.add_development_dependency "vcr",      "~> 2.9.3"
-  spec.add_development_dependency "webmock",  "~> 1.18"
+  spec.add_development_dependency "webmock",  "~> 1.20.4"
 end
