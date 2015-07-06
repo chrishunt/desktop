@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "faraday",  "~> 0.9.1"
   spec.add_dependency "sqlite3",  "~> 1.3.10"
-  spec.add_dependency "thor",     "~> 0.19"
+  spec.add_dependency "thor",     "~> 0.19.1"
 
   spec.add_development_dependency "bundler",  "~> 1.10.6"
   spec.add_development_dependency "minitest", "~> 5.7.0"
